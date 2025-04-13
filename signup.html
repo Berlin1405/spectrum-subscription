@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Spectrum</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-grid">
+            <!-- Left Column: Branding/Welcome Section -->
+            <div class="auth-branding">
+                <h1>Join Spectrum</h1>
+                <p>Become a part of our creative community and unlock premium design resources to elevate your projects.</p>
+                <img src="images/signup-illustration.svg" alt="Sign Up Illustration" class="auth-illustration">
+            </div>
+            <!-- Right Column: Sign-Up Form -->
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Create an Account</h2>
+                    <p>Sign up to start your creative journey with Spectrum.</p>
+                </div>
+                <div class="auth-body">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn btn-google">
+                            <i class="fab fa-google"></i> Sign up with Google
+                        </button>
+                        <button class="btn btn-apple">
+                            <i class="fab fa-apple"></i> Sign up with Apple
+                        </button>
+                    </div>
+                    <p class="auth-switch">
+                        Already have an account? <a href="login.html">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

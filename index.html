@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum - Premium Design Resources</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Spectrum</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="login.html" class="btn btn-outline">Log In</a></li>
+                <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Unlock Your Creative Potential</h1>
+                <p>Access thousands of premium design resources, templates, and tools with Spectrum's subscription plans.</p>
+                <button class="btn btn-hero" id="heroSignupBtn">Get Started</button>
+            </div>
+            <div class="hero-image">
+                <div class="gradient-card card1"></div>
+                <div class="gradient-card card2"></div>
+                <div class="gradient-card card3"></div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Why Choose Spectrum?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Premium Templates</h3>
+                    <p>Access thousands of professionally designed templates for every project type.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>UI Components</h3>
+                    <p>Ready-to-use UI components that save you hours of development time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <h3>Font Library</h3>
+                    <p>Extensive collection of premium fonts for all your typography needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Stock Photos</h3>
+                    <p>High-resolution stock photos and illustrations to enhance your designs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Yearly <span class="discount">Save 20%</span></span>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="price-monthly">$12</span>
+                            <span class="price-yearly">$9.60</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p>Perfect for beginners</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 50+ Templates per month</li>
+                            <li><i class="fas fa-check"></i> 10 Downloads per day</li>
+                            <li><i class="fas fa-check"></i> Basic UI components</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Font library access</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Stock photos</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Priority support</li>
+                        </ul>
+                    </div>
+                    <a href="basic-plan.html" class="btn btn-outline" data-plan="basic">Choose Plan</a>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="pricing-card popular">
+                    <div class="popular-tag">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="price-monthly">$24</span>
+                            <span class="price-yearly">$19.20</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p>Perfect for professionals</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 200+ Templates per month</li>
+                            <li><i class="fas fa-check"></i> Unlimited downloads</li>
+                            <li><i class="fas fa-check"></i> Advanced UI components</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> Full font library access</li>
+                            <li><i class="fas fa-check"></i> 100 Stock photos/month</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Priority support</li>
+                        </ul>
+                    </div>
+                    <a href="pro-plan.html" class="btn btn-primary" data-plan="pro">Choose Plan</a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="price-monthly">$49</span>
+                            <span class="price-yearly">$39.20</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p>Perfect for teams</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Unlimited templates</li>
+                            <li><i class="fas fa-check"></i> Unlimited downloads</li>
+                            <li><i class="fas fa-check"></i> All UI components</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                            <li><i class="fas fa-check"></i> Full font library access</li>
+                            <li><i class="fas fa-check"></i> Unlimited stock photos</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                    </div>
+                    <a href="enterprise-plan.html" class="btn btn-outline" data-plan="enterprise">Choose Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Subscribers Say</h2>
+            <div class="testimonial-slider">
+                <!-- Testimonial Cards -->
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"Spectrum has transformed my workflow. The quality of templates and UI components has saved me countless hours on client projects."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div>
+                            <strong>Jessica Davis</strong>
+                            <p>Freelance Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The Pro plan is worth every penny. The resources are top-notch, and the support team is always helpful."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div>
+                            <strong>Michael King</strong>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Spectrum's Enterprise plan has been a game-changer for our agency. Unlimited downloads and priority support are invaluable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AR</div>
+                        <div>
+                            <strong>Anna Roberts</strong>
+                            <p>Agency Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="testimonial-controls">
+                    <button class="control-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="control-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="control-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I cancel my subscription anytime?
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can cancel your subscription anytime from your account settings.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are there any limits to how I can use the resources?
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>No, you can use the resources without any limits as long as you have an active subscription.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I upgrade or downgrade my plan later?
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can upgrade or downgrade your plan anytime from your account settings.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer a free trial?
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer a 7-day free trial for all new users.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Elevate Your Design Game?</h2>
+                <p>Join thousands of designers and creators who are already taking advantage of Spectrum's resources.</p>
+                <button class="btn btn-hero" id="ctaSignupBtn">Start Your Free Trial</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">Spectrum</div>
+                <p>Premium design resources at your fingertips. Unlock your creative potential with Spectrum.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Templates</a></li>
+                    <li><a href="#">UI Components</a></li>
+                    <li><a href="#">Fonts</a></li>
+                    <li><a href="#">Stock Photos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Spectrum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Container -->
+    <div class="modal-container" id="modalContainer">
+        <!-- Updated Login Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h2>Welcome Back!</h2>
+                    <p>Log in to access your account and continue your creative journey.</p>
+                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                    </form>
+                    <div class="modal-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn btn-google">
+                            <i class="fab fa-google"></i> Log in with Google
+                        </button>
+                        <button class="btn btn-apple">
+                            <i class="fab fa-apple"></i> Log in with Apple
+                        </button>
+                    </div>
+                    <p class="modal-switch">
+                        Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Updated Signup Modal -->
+        <div class="modal" id="signupModal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h2>Join Spectrum</h2>
+                    <p>Create an account to unlock premium design resources and tools.</p>
+                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+                            <div class="password-strength">
+                                <div class="strength-meter">
+                                    <span></span>
+                                </div>
+                                <p class="strength-text">Password strength: <span>Weak</span></p>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="termsCheck" required>
+                            <label for="termsCheck">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+                    <div class="modal-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn btn-google">
+                            <i class="fab fa-google"></i> Sign up with Google
+                        </button>
+                        <button class="btn btn-apple">
+                            <i class="fab fa-apple"></i> Sign up with Apple
+                        </button>
+                    </div>
+                    <p class="modal-switch">
+                        Already have an account? <a href="#" id="switchToLogin">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Selection Modal -->
+        <div class="modal" id="planModal">
+            <div class="modal-header">
+                <h2>Complete Your Subscription</h2>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="plan-summary">
+                    <h3>Selected Plan: <span id="selectedPlan">Pro</span></h3>
+                    <div class="plan-price">
+                        <span id="selectedPlanPrice">$24</span><span>/month</span>
+                    </div>
+                    <div class="plan-billing">
+                        <p>Billed <span id="selectedBillingCycle">monthly</span></p>
+                    </div>
+                </div>
+                <form id="paymentForm">
+                    <div class="form-section">
+                        <h4>Personal Information</h4>
+                        <div class="form-group">
+                            <label for="paymentName">Full Name</label>
+                            <input type="text" id="paymentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentEmail">Email Address</label>
+                            <input type="email" id="paymentEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h4>Payment Details</h4>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <div class="card-input">
+                                <input type="text" id="cardNumber" placeholder="1234 1234 1234 1234" required>
+                                <div class="card-icons">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-amex"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Expiry Date</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCvc">CVC</label>
+                                <input type="text" id="cardCvc" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="termsCheckPayment" required>
+                            <label for="termsCheckPayment">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Start Your Free Trial</button>
+                    <p class="payment-note">You won't be charged until after your 7-day free trial. Cancel anytime.</p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-header">
+                <h2>Welcome to Spectrum!</h2>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body success-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Your subscription has been activated</h3>
+                <p>Thank you for joining Spectrum! Your 7-day free trial has started.</p>
+                <p class="account-email">We've sent a confirmation email to <span id="userEmail">user@example.com</span></p>
+                <button class="btn btn-primary btn-block" id="gotoAccountBtn">Go to My Account</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/pricing-toggle.js" defer></script>
+</body>
+</html>

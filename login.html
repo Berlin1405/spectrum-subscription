@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Spectrum</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-grid">
+            <!-- Left Column: Branding/Welcome Section -->
+            <div class="auth-branding">
+                <h1>Welcome Back!</h1>
+                <p>Log in to access your account and continue your creative journey with Spectrum.</p>
+                <img src="images/login-illustration.svg" alt="Login Illustration" class="auth-illustration">
+            </div>
+            <!-- Right Column: Login Form -->
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Log In</h2>
+                    <p>Access your account and unlock premium design resources.</p>
+                </div>
+                <div class="auth-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                    </form>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn btn-google">
+                            <i class="fab fa-google"></i> Log in with Google
+                        </button>
+                        <button class="btn btn-apple">
+                            <i class="fab fa-apple"></i> Log in with Apple
+                        </button>
+                    </div>
+                    <p class="auth-switch">
+                        Don't have an account? <a href="signup.html">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
