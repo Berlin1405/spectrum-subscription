@@ -525,3 +525,12 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heroSignupBtn = document.getElementById('heroSignupBtn');
+    const pricingSection = document.getElementById('pricing');
+
+    heroSignupBtn.addEventListener('click', () => {
+        pricingSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
