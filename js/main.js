@@ -160,20 +160,30 @@ document.addEventListener('DOMContentLoaded', () => {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const toggle = item.querySelector('.faq-toggle i');
+        const answer = item.querySelector('.faq-answer');
 
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close all other items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
                 otherItem.querySelector('.faq-toggle i').className = 'fas fa-plus';
+                otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                otherItem.querySelector('.faq-answer').style.opacity = '0';
             });
 
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
                 toggle.className = 'fas fa-minus';
+                answer.style.maxHeight = answer.scrollHeight + 'px'; // Set to the height of the content
+                answer.style.opacity = '1'; // Make visible
+            } else {
+                item.classList.remove('active');
+                toggle.className = 'fas fa-plus';
+                answer.style.maxHeight = '0'; // Hide
+                answer.style.opacity = '0'; // Make invisible
             }
         });
     });

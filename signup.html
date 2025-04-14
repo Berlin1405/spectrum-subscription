@@ -9,15 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body class="auth-page">
     <div class="auth-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
         <div class="auth-grid">
             <!-- Left Column: Branding/Welcome Section -->
             <div class="auth-branding">
                 <h1>Join Spectrum</h1>
                 <p>Become a part of our creative community and unlock premium design resources to elevate your projects.</p>
-                <img src="images/signup-illustration.svg" alt="Sign Up Illustration" class="auth-illustration">
+                <img src="images/add.png" alt="Sign Up Illustration" class="auth-illustration">
             </div>
             <!-- Right Column: Sign-Up Form -->
             <div class="auth-card">
@@ -63,5 +68,7 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

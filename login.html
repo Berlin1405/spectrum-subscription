@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - Spectrum</title>
+    <title>Login - Spectrum</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add GSAP library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
 </head>
 <body class="auth-page">
     <div class="auth-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
         <div class="auth-grid">
             <!-- Left Column: Branding/Welcome Section -->
             <div class="auth-branding">
                 <h1>Welcome Back!</h1>
                 <p>Log in to access your account and continue your creative journey with Spectrum.</p>
-                <img src="images/login-illustration.svg" alt="Login Illustration" class="auth-illustration">
+                <img src="images/login.png" alt="Login Illustration" class="auth-illustration">
             </div>
             <!-- Right Column: Login Form -->
             <div class="auth-card">
                 <div class="auth-header">
-                    <h2>Log In</h2>
-                    <p>Access your account and unlock premium design resources.</p>
+                    <h2>Welcome Back!</h2>
+                    <p>Log in to access your account and continue your creative journey.</p>
                 </div>
                 <div class="auth-body">
                     <form id="loginForm">
@@ -56,5 +61,8 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/faq.js"></script>
 </body>
 </html>

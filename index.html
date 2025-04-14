@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <header>
@@ -226,40 +229,42 @@
         <!-- FAQ Section -->
         <section id="faq" class="faq">
             <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can I cancel my subscription anytime?
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I cancel my subscription anytime?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period.</p>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Yes, you can cancel your subscription anytime from your account settings.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are there any limits to how I can use the resources?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, you can use the resources without any limits as long as you have an active subscription.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    Are there any limits to how I can use the resources?
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I upgrade or downgrade my plan later?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your plan anytime from your account settings.</p>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>No, you can use the resources without any limits as long as you have an active subscription.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can I upgrade or downgrade my plan later?
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, you can upgrade or downgrade your plan anytime from your account settings.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    Do you offer a free trial?
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we offer a 7-day free trial for all new users.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer a free trial?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 7-day free trial for all new users.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -495,6 +500,91 @@
     </div>
 
     <script src="js/main.js"></script>
-    <script src="js/pricing-toggle.js" defer></script>
+    <script src="js/pricing-toggle.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        anime({
+            targets: '.logo-svg path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            duration: 2000,
+            loop: true
+        });
+
+        // Initialize GSAP ScrollTrigger animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate sections as they scroll into view
+        gsap.utils.toArray('section').forEach((section) => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%', // Start animation when section is 80% in view
+                    toggleActions: 'play none none reverse', // Play animation on scroll
+                },
+            });
+        });
+
+        // Add parallax effect to the hero image
+        gsap.to('.hero-image', {
+            yPercent: -20,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true, // Smooth scrolling effect
+            },
+        });
+
+        // Animate the gradient cards in the hero section
+        gsap.from('.gradient-card', {
+            scale: 0,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top center',
+                end: 'bottom center',
+                toggleActions: 'play none none reverse',
+            },
+        });
+        // Animate the testimonial slider
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalCards = testimonialCards.length;
+        const showCard = (index) => {
+            testimonialCards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+        };
+        const nextCard = () => {
+            currentIndex = (currentIndex + 1) % totalCards;
+            showCard(currentIndex);
+        };
+        const prevCard = () => {
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            showCard(currentIndex);
+        };
+        document.querySelector('.next').addEventListener('click', nextCard);
+        document.querySelector('.prev').addEventListener('click', prevCard);
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showCard(currentIndex);
+            });
+        });
+       
+
+    </script>
 </body>
 </html>
