@@ -460,6 +460,20 @@ input:checked + .slider:before {
     color: var(--text-light);
 }
 
+/* Hide yearly prices by default */
+.price-yearly {
+    display: none;
+}
+
+/* Show yearly prices and hide monthly prices when the toggle is active */
+#billing-toggle:checked ~ .pricing-grid .price-monthly {
+    display: none;
+}
+
+#billing-toggle:checked ~ .pricing-grid .price-yearly {
+    display: inline;
+}
+
 /* Testimonials Section */
 .testimonials {
     padding: 6rem 2rem;
@@ -2227,5 +2241,112 @@ header .logo {
     .auth-illustration {
         max-width: 150px; /* Even smaller on mobile */
         margin: 1rem auto;
+    }
+}
+
+/* General Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #1E2021;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: var(--card-shadow);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .auth-buttons {
+        display: none; /* Hide auth buttons in mobile view */
+    }
+
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none; /* Hide hero image for smaller screens */
+    }
+
+    /* Features Section */
+    .feature-grid {
+        grid-template-columns: 1fr; /* Stack feature cards vertically */
+    }
+
+    /* Pricing Section */
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Stack pricing cards vertically */
+    }
+
+    /* Testimonials Section */
+    .testimonial-slider {
+        padding: 1rem;
+    }
+
+    .testimonial-controls {
+        flex-direction: column; /* Stack controls vertically */
+        gap: 1rem;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+        padding: 1rem;
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 2rem 1rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack footer columns vertically */
+        gap: 2rem;
+    }
+}
+
+/* Additional Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Reduce font size for hero heading */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Reduce font size for hero paragraph */
+    }
+
+    .btn {
+        padding: 0.5rem 1rem; /* Reduce button padding */
+        font-size: 0.9rem; /* Reduce button font size */
+    }
+
+    .pricing-card {
+        padding: 1.5rem; /* Reduce padding for pricing cards */
+    }
+
+    .testimonial-card {
+        padding: 1rem; /* Reduce padding for testimonial cards */
+    }
+
+    .faq-question h3 {
+        font-size: 1rem; /* Reduce font size for FAQ questions */
     }
 }

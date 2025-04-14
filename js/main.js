@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             // Show monthly prices and hide yearly prices
             monthlyPrices.forEach(price => price.style.display = "inline");
-            yearlyPrices.forEach(price => price.style.display = "none");
+            yearlyPrices.forEach(price.style.display = "none");
         }
     };
 
@@ -514,4 +514,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize the slider
     showSlide(currentSlide);
     startAutoSlide(); // Start automatic sliding on page load
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
 });
